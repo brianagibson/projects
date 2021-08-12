@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fun Stuff!</title>
+    <link href="./style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet" type="text/css">
+</head>
+
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
+    <div class="header">
+      <h1>Nonogram Surprise!</h1>
+    </div>
+    <div class="title-row">
+      <img src="https://content.codecademy.com/projects/chore-door/images/star.svg">
+      <p class="instructions-title">Instructions</p>
+      <img src="https://content.codecademy.com/projects/chore-door/images/star.svg">
+    </div>
+    <div id="bg">
+        <table class="instructions-row">
+        <tr>
+            <td class="instructions-number">1.</td>
+            <td class="instructions-text">Using your super smart skills, reveal the puzzle one square at a time. &#129299;</td>
+        </tr>
+        <tr>
+            <td class="instructions-number">2.</td>
+            <td class="instructions-text">Even if you're super smart and figure it out, you gotta finish to get to the reveal! &#128580;</td>
+        </tr>
+        <tr>
+            <td class="instructions-number">3.</td>
+            <td class="instructions-text">Get excited for your surprise. I know you'll love it. &#128513;</td>
+        </tr>
+        <tr>
+            <td class="instructions-number">4.</td>
+            <td class="instructions-text">Thanks for putting up with me and my silly ways of revealing fun things to you! &#128540;</td>
+        </tr>
+        </table>
+    </div>
+    <table>
+        <td class="box"></td>
+    </table>
+    <div class="container">
+        <div class="solution">
+            <table>
+            <tr> <!--lead row-->
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="colspacer"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+            </tr>
+            <tr> <!--clue row 8-->
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="colspacer"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue gray">1</td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+            </tr>
+            <tr> <!--clue row 7-->
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="colspacer"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue white">4</td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue gray">1</td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+            </tr>
+            <tr> <!--clue row 6-->
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="colspacer"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue blue">1</td>
+                <td class="box columnclue gray">1</td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue white">2</td>
+                <td class="box columnclue gray">3</td>
+                <td class="box columnclue gray">5</td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+            </tr>
+            <tr> <!--clue row 5-->
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="colspacer"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue gray">2</td>
+                <td class="box columnclue white">4</td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue blue">1</td>
+                <td class="box columnclue blue">3</td>
+                <td class="box columnclue blue">2</td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+            </tr>
+            <tr> <!--clue row 4-->
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="colspacer"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue gray">2</td>
+                <td class="box columnclue blue">1</td>
+                <td class="box columnclue blue">4</td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue white">5</td>
+                <td class="box columnclue white">3</td>
+                <td class="box columnclue white">4</td>
+                <td class="box columnclue gray">5</td>
+                <td class="box columnclue gray">6</td>
+                <td class="box columnclue gray">7</td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+            </tr>
+            <tr> <!--clue row 3-->
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="colspacer"></td>
+                <td class="box columnclue "></td>
+                <td class="box columnclue gray">6</td>
+                <td class="box columnclue white">3</td>
+                <td class="box columnclue red">3</td>
+                <td class="box columnclue red">3</td>
+                <td class="box columnclue white">7</td>
+                <td class="box columnclue "></td>
+                <td class="box columnclue blue">3</td>
+                <td class="box columnclue blue">4</td>
+                <td class="box columnclue blue">1</td>
+                <td class="box columnclue blue">3</td>
+                <td class="box columnclue blue">2</td>
+                <td class="box columnclue blue">2</td>
+                <td class="box columnclue "></td>
+                <td class="box columnclue gray">12</td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+            </tr>
+            <tr> <!--clue row 2-->
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="colspacer"></td>
+                <td class="box columnclue gray">6</td>
+                <td class="box columnclue blue">8</td>
+                <td class="box columnclue blue">8</td>
+                <td class="box columnclue blue">2</td>
+                <td class="box columnclue blue">2</td>
+                <td class="box columnclue blue">7</td>
+                <td class="box columnclue white">8</td>
+                <td class="box columnclue green">2</td>
+                <td class="box columnclue green">1</td>
+                <td class="box columnclue white">1</td>
+                <td class="box columnclue white">5</td>
+                <td class="box columnclue white">1</td>
+                <td class="box columnclue white">1</td>
+                <td class="box columnclue gray">9</td>
+                <td class="box columnclue blue">1</td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+            </tr>
+            <tr> <!--clue row 1-->
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="colspacer"></td>
+                <td class="box columnclue blue">9</td>
+                <td class="box columnclue gray">1</td>
+                <td class="box columnclue gray">1</td>
+                <td class="box columnclue gray">1</td>
+                <td class="box columnclue gray">1</td>
+                <td class="box columnclue gray">1</td>
+                <td class="box columnclue blue">7</td>
+                <td class="box columnclue blue">1</td>
+                <td class="box columnclue blue">1</td>
+                <td class="box columnclue green">2</td>
+                <td class="box columnclue blue">2</td>
+                <td class="box columnclue blue">6</td>
+                <td class="box columnclue blue">5</td>
+                <td class="box columnclue blue">6</td>
+                <td class="box columnclue gray">2</td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+            </tr>
+            <tr> <!--gap row-->
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="colrowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+            </tr>
+            <tr> <!--row 1: gray-5, white-2, gray-8-->
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue gray">5</td>
+                <td class="box rowclue white">2</td>
+                <td class="box rowclue gray">8</td>
+                <td class="colspacer"></td>
+                <td class="box game gray start" id="r1c1"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+            </tr>
+            <tr> <!--row 2: gray-3, white-5, gray-7-->
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue gray">3</td>
+                <td class="box rowclue white">5</td>
+                <td class="box rowclue rowclue gray">7</td>
+                <td class="colspacer"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+            </tr>
+            <tr> <!--row 3: gray-2, white-6, gray-7-->
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue gray">2</td>
+                <td class="box rowclue white">6</td>
+                <td class="box rowclue rowclue gray">7</td>
+                <td class="colspacer"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+            </tr>
+            <tr> <!--row 4: gray-2, white-5, blue-2, gray-6-->
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue gray">2</td>
+                <td class="box rowclue white">5</td>
+                <td class="box rowclue blue">2</td>
+                <td class="box rowclue gray">6</td>
+                <td class="colspacer"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+            </tr>
+            <tr> <!--row 5: gray-2, white-6, blue-1, gray-6-->
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue gray">2</td>
+                <td class="box rowclue white">6</td>
+                <td class="box rowclue blue">1</td>
+                <td class="box rowclue gray">6</td>
+                <td class="colspacer"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+            </tr>
+            <tr> <!--row 6: gray-2, blue-3, white-3, blue-3, gray-4-->
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue gray">2</td>
+                <td class="box rowclue blue">3</td>
+                <td class="box rowclue white">3</td>
+                <td class="box rowclue blue">3</td>
+                <td class="box rowclue gray">4</td>
+                <td class="colspacer"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+            </tr>
+            <tr> <!--row 7: blue-3, gray-1, blue-1, white-4, blue-3, gray-3-->
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue blue">3</td>
+                <td class="box rowclue gray">1</td>
+                <td class="box rowclue blue">1</td>
+                <td class="box rowclue white">4</td>
+                <td class="box rowclue blue">3</td>
+                <td class="box rowclue gray">3</td>
+                <td class="colspacer"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+            </tr>
+            <tr> <!--row 8: blue-3, gray-1, blue-2, white-4, blue-3, gray-2-->
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue blue">3</td>
+                <td class="box rowclue gray">1</td>
+                <td class="box rowclue blue">2</td>
+                <td class="box rowclue white">4</td>
+                <td class="box rowclue blue">3</td>
+                <td class="box rowclue gray">2</td>
+                <td class="colspacer"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+            </tr>
+            <tr> <!--row 9: blue-7, white-5, blue-1, gray-2-->
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue blue">7</td>
+                <td class="box rowclue white">5</td>
+                <td class="box rowclue blue">1</td>
+                <td class="box rowclue gray">2</td>
+                <td class="colspacer"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+            </tr>
+            <tr> <!--row 10: blue-3, red-2, blue-4, white-2, blue-1, white-1, blue-1, gray-1-->
+                <td class="box rowclue blue">3</td>
+                <td class="box rowclue red">2</td>
+                <td class="box rowclue blue">4</td>
+                <td class="box rowclue white">2</td>
+                <td class="box rowclue blue">1</td>
+                <td class="box rowclue white">1</td>
+                <td class="box rowclue blue">1</td>
+                <td class="box rowclue gray">1</td>
+                <td class="colspacer"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game red start"></td>
+                <td class="box game red start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game white start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game gray start"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+            </tr>
+            <tr> <!--row 11: blue-3, red-2, blue-4, white-2, blue-3, gray-1-->
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue blue">3</td>
+                <td class="box rowclue red">2</td>
+                <td class="box rowclue blue">4</td>
+                <td class="box rowclue white">2</td>
+                <td class="box rowclue blue">3</td>
+                <td class="box rowclue gray">1</td>
+                <td class="colspacer"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game red start"></td>
+                <td class="box game red start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game gray start"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+            </tr>
+            <tr> <!--row 12: blue-3, red-2, blue-5, white-1, blue-3, gray-1-->
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue blue">3</td>
+                <td class="box rowclue red">2</td>
+                <td class="box rowclue blue">5</td>
+                <td class="box rowclue white">1</td>
+                <td class="box rowclue blue">3</td>
+                <td class="box rowclue gray">1</td>
+                <td class="colspacer"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game red start"></td>
+                <td class="box game red start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game white start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game gray start"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+            </tr>
+            <tr> <!--row 13: blue-7, green-1, blue-1, white-2, blue-4-->
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue blue">7</td>
+                <td class="box rowclue green">1</td>
+                <td class="box rowclue blue">1</td>
+                <td class="box rowclue white">2</td>
+                <td class="box rowclue blue">4</td>
+                <td class="colspacer"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game green start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game white start"></td>
+                <td class="box game white start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+            </tr>
+            <tr> <!--row 14: blue-7, green-3, blue-4, gray-1-->
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue blue">7</td>
+                <td class="box rowclue green">3</td>
+                <td class="box rowclue blue">4</td>
+                <td class="box rowclue gray">1</td>
+                <td class="colspacer"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game green start"></td>
+                <td class="box game green start"></td>
+                <td class="box game green start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game gray start"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+            </tr>
+            <tr> <!--row 15: blue-1, gray-5, blue-3, green-1, blue-4, gray-1-->
+                <td class="box rowclue"></td>
+                <td class="box rowclue"></td>
+                <td class="box rowclue blue">1</td>
+                <td class="box rowclue gray">5</td>
+                <td class="box rowclue blue">3</td>
+                <td class="box rowclue green">1</td>
+                <td class="box rowclue blue">4</td>
+                <td class="box rowclue gray">1</td>
+                <td class="colspacer"></td>
+                <td class="box game blue start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game gray start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game green start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game blue start"></td>
+                <td class="box game gray start"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+            </tr>
+            <tr> <!--gap row-->
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="colrowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+            </tr>
+            <tr> <!--lead row-->
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="cornerclue"></td>
+                <td class="colspacer"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="box columnclue"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+                <td class="colspacer"></td>
+            </tr>
+            </table>
+        </div>
+        <div>
+            <table>
+                <td class="gray picker" id="grayPicker"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="white picker" id="whitePicker"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="blue picker" id="bluePicker"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="red picker" id="redPicker"></td>
+                <td class="rowspacer"></td>
+                <td class="rowspacer"></td>
+                <td class="green picker" id="greenPicker"></td>
+            </table>
+        </div>
+        <div>
+            <table>
+                <td class="box"></td>
+            </table>
+            <table>
+                <td class="box"></td>
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript">
+        let activeColor = '';
+        let tileClass = '';
+        let counter = 224;
+        (function colorPicker(){
+            $('td.picker').click(function(e){
+                activeColor = this.id;
+                $('td').removeClass('active');
+                $(this).addClass('active');
+            }); 
+        })();
+        (function togCell(){
+            $('td').click(function(e){
+                tileClass = this.className;
+                return ((activeColor === 'whitePicker' & tileClass === 'box game white start') || 
+                    (activeColor === 'greenPicker' & tileClass === 'box game green start') ||
+                    (activeColor === 'redPicker' & tileClass === 'box game red start') ||
+                    (activeColor === 'bluePicker' & tileClass === 'box game blue start') ||
+                    (activeColor === 'grayPicker' & tileClass === 'box game gray start')) ? ($(this).removeClass('start'), counter++) : false;
+            }); 
+        })();
+    </script>     
+    <div id="start" class="start-row">Good luck!</div>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
+
+
+<!--
+
+Gray #CCC
+White #FFF
+Blue #4A86E8
+Red #F00
+Green #38761D
+
+Next steps:
+XX Add game class to all the game td tags
+XX Add conditional logic so things are only picked as appropriate
+XX Add tile counter
+Add finished button (when tile counter => 225)
+Add "what you've won!" section
+XX Add new header banner
+XX Update instructions
+Add restart button
+-- restart adds start class to every game tag
+Move functions to main.js
+
+-->
