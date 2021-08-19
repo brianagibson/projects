@@ -21,19 +21,27 @@
         <table class="instructions-row">
         <tr>
             <td class="instructions-number">1.</td>
-            <td class="instructions-text">Using your super smart skills, reveal the puzzle one square at a time. &#129299;</td>
+            <td class="instructions-text">
+                Using your super smart skills, reveal the puzzle one square at a time. &#129299;
+            </td>
         </tr>
         <tr>
             <td class="instructions-number">2.</td>
-            <td class="instructions-text">Even if you're super smart and figure it out, you gotta finish to get to the reveal! &#128580;</td>
+            <td class="instructions-text">
+                Even if you're super smart and figure it out, you gotta finish to get to the reveal! &#128580;
+            </td>
         </tr>
         <tr>
             <td class="instructions-number">3.</td>
-            <td class="instructions-text">Get excited for your surprise. I know you'll love it. &#128513;</td>
+            <td class="instructions-text">
+                Get excited for your surprise. I know you'll love it. &#128513;
+            </td>
         </tr>
         <tr>
             <td class="instructions-number">4.</td>
-            <td class="instructions-text">Thanks for putting up with me and my silly ways of revealing fun things to you! &#128540;</td>
+            <td class="instructions-text">
+                Thanks for putting up with me and my silly ways of revealing fun things to you! &#128540;
+            </td>
         </tr>
         </table>
     </div>
@@ -989,30 +997,20 @@
             </table>
         </div>
     </div>
-    <script type="text/javascript">
-        let activeColor = '';
-        let tileClass = '';
-        let counter = 224;
-        (function colorPicker(){
-            $('td.picker').click(function(e){
-                activeColor = this.id;
-                $('td').removeClass('active');
-                $(this).addClass('active');
-            }); 
-        })();
-        (function togCell(){
-            $('td').click(function(e){
-                tileClass = this.className;
-                return ((activeColor === 'whitePicker' & tileClass === 'box game white start') || 
-                    (activeColor === 'greenPicker' & tileClass === 'box game green start') ||
-                    (activeColor === 'redPicker' & tileClass === 'box game red start') ||
-                    (activeColor === 'bluePicker' & tileClass === 'box game blue start') ||
-                    (activeColor === 'grayPicker' & tileClass === 'box game gray start')) ? ($(this).removeClass('start'), counter++) : false;
-            }); 
-        })();
-    </script>     
     <div id="start" class="start-row">Good luck!</div>
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript">
+        (function togCell(){
+                        console.log('1. fire togCell before click');
+            $('td').click(function(e){
+                        console.log('5. fire togCell after click');
+                tileClass = this.className;
+                        console.log('6. fire togCell after tileClass');
+                (colorMatches(tileClass)) ? ($(this).removeClass('start'), counter++) : false;
+                revealWinner();
+            }); 
+        })();
+    </script> 
   </body>
 </html>
 
