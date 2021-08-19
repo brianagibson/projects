@@ -1,3 +1,80 @@
+let activeColor = '';
+let tileClass = '';
+let counter = '';
+const winner = document.getElementById('start')
+
+let graPicker = document.getElementById('grayPicker');
+let wPicker = document.getElementById('whitePicker');
+let bPicker = document.getElementById('bluePicker');
+let rPicker = document.getElementById('redPicker');
+let grePicker = document.getElementById('greenPicker');
+
+/* activeColor and tileClass need to be populated BEFORE the function */
+const colorPicker = () => {
+              console.log('2. fire colorPicker.js');
+              console.log('3. '+this.id+' = colorPicker this.id outside td.picker');
+              console.log('4. '+activeColor+' = colorPicker activeColor outside td.picker');
+  $('td.picker').click(function(e){
+              console.log('8. '+this.id+' = colorPicker this.id inside td.picker');
+              console.log('9. '+activeColor+' = colorPicker activeColor inside td.picker');
+    activeColor = this.id;
+              console.log('10. '+this.id+' = colorPicker this.id after activeColor');
+              console.log('11. '+activeColor+' = colorPicker after activeColor'); 
+      $('td').removeClass('active');
+      $(this).addClass('active');
+  });
+};
+
+/* bad code
+const togCell = () => {
+  $('td.start').click(function(e){
+      tileClass = this.className;
+      (colorMatches(tileClass)) ? ($(this).removeClass('start'), counter++) : false;
+      revealWinner();
+  }); 
+};
+
+let gameTile = document.getElementById('test');
+
+gameTile.onclick = () => {
+  togCell()
+};
+*/
+
+const colorMatches = (tileClass) => {
+  console.log('7. fire colorMatches');
+  return ((activeColor === 'whitePicker' & tileClass === 'box game white start') || 
+      (activeColor === 'greenPicker' & tileClass === 'box game green start') ||
+      (activeColor === 'redPicker' & tileClass === 'box game red start') ||
+      (activeColor === 'bluePicker' & tileClass === 'box game blue start') ||
+      (activeColor === 'grayPicker' & tileClass === 'box game gray start')) ? true : false;
+};
+
+const revealWinner = () => {
+  (counter == 225) ? winner.innerHTML = 'Win!': false;
+};
+
+graPicker.onclick = () => {
+  colorPicker();
+};
+
+wPicker.onclick = () => {
+  colorPicker();
+};
+
+bPicker.onclick = () => {
+  colorPicker();
+};
+
+rPicker.onclick = () => {
+  colorPicker();
+};
+
+grePicker.onclick = () => {
+  colorPicker();
+};
+
+/*
 const doorImage1 = document.getElementById('door1');
 const doorImage2 = document.getElementById('door2');
 const doorImage3 = document.getElementById('door3');
@@ -99,3 +176,4 @@ const randomChoreDoorGenerator = () => {
 startRound();
 
 
+*/
