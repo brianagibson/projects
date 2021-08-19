@@ -76,14 +76,14 @@
   }
 
   .picker {
-    border-radius: 15px;
+    border-radius: 16px;
+    border: 1px solid black;
     height: 30px;
     width: 30px;
   }
 
   .active {
-    border-radius: 0px;
-    outline: 5px solid black;
+    box-shadow: 0 0 5px 5px azure;
   }
 
   .gray { 
