@@ -1,11 +1,20 @@
 let activeColor = '';
 let tileClass = '';
 let counter = '';
+let isClicked = false;
 let winner = document.getElementById('start')
 
 let pickers = document.querySelectorAll('.picker');
 let gamePieces = document.querySelectorAll('.game');
 let counterMax = gamePieces.length;
+
+const draggingEnabled = () => {
+  isClicked = true;
+};
+
+const draggingDisabled = () => {
+  isClicked = false;
+};
 
 /* selects the active color picker */
 const colorPicker = () => {
@@ -33,10 +42,18 @@ const revealWinner = () => {
   winner.style.borderRadius = '20px';
 };
 
-/* reveals the color of the tile if it matches the color picker */
+/* reveals the color of the tile when clicked */
 var revealCell = function(){
   tileClass = this.className;
-  (colorMatches(tileClass)) ? ($(this).removeClass('start'), counter++) : false;
+  (colorMatches(tileClass) & tileClass.includes('start')) ? ($(this).removeClass('start'), counter++) : false;
+  (counter == counterMax) ? revealWinner() : false;
+};
+
+/* reveals the color of the tile when clicked and over */
+var slideRevealCell = function(){
+  if (isClicked === false) { return; };
+  tileClass = this.className;
+  (colorMatches(tileClass) & tileClass.includes('start')) ? ($(this).removeClass('start'), counter++) : false;
   (counter == counterMax) ? revealWinner() : false;
 };
 
@@ -47,8 +64,10 @@ pickers.forEach(function(elem) {
 
 /* applies the event listener to each game piece */
 gamePieces.forEach(function(elem) { 
-  elem.addEventListener('click', revealCell);
+  elem.addEventListener('mousedown', revealCell);
+  elem.addEventListener('mouseenter', slideRevealCell);
 });
 
-
+gameArea.addEventListener('mousedown', draggingEnabled);
+gameArea.addEventListener('mouseup', draggingDisabled);
 
