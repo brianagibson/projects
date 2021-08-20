@@ -9,7 +9,7 @@ console.log(isOpen);
 
 const maskRedirect = () => {
   console.log('fire 1');
-  if (isOpen || openDate || testDate) { return; };
+  if (isOpen || openDate > Date.now() || testDate > Date.now()) { return; };
   console.log('fire 2');
   window.location = 'https://brianagibson.github.io/projects/surprise/mask.html';
 };
