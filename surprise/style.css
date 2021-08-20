@@ -1,191 +1,193 @@
 * {
-    color: #00ffff;
-    font-family: 'Work Sans';
-    /*border: 1px solid red;/* for debugging */
-  }
+  color: #00ffff;
+  font-family: 'Work Sans';
+  /*border: 1px solid red;/* for debugging */
+}
 
-  .solution {
-    width: 100%;
-    position: inherit;
-    padding-top: 24px;
-    /*border: 3px dotted green;/* for debugging */
-  }
+.solution {
+  width: 100%;
+  position: inherit;
+  padding-top: 24px;
+  /*border: 3px dotted green;/* for debugging */
+}
 
-  body {
-    background-color: #010165;
-    margin: 0px;
-    /*border: 5px dashed blue;/* for debugging */
-  }
-  
-  h1 {
-    color: darkslategray;
-  }
+body {
+  background-color: #010165;
+  margin: 0px;
+  /*border: 5px dashed blue;/* for debugging */
+}
 
-  .box {
-    background-color: none;
-    border: 1px solid;
-    border-color: rgba(31, 31, 31, .1);
-    font-family: 'Work Sans';
-    color: black;
-    text-align: center;
-    height: 20px;
-    width: 20px;
-    padding: 0px;
-  }
+h1 {
+  color: darkslategray;
+}
 
-  .colspacer {
-    background-color: none;
-    height: 10px;
-    width: 10px;
-  }
+.box {
+  background-color: none;
+  border: 1px solid;
+  border-color: rgba(31, 31, 31, .1);
+  font-family: 'Work Sans';
+  color: black;
+  text-align: center;
+  height: 20px;
+  width: 20px;
+  padding: 0px;
+}
 
-  .rowspacer {
-    background-color: none;
-    height: 10px;
-    width: 10px;
-  }
+.colspacer {
+  background-color: none;
+  height: 10px;
+  width: 10px;
+}
 
-  .columnclue {
-    background-color: none;
-    height: 8px;
-    width: 20px;
-    font-size: 10px;
-    border-radius: 3px;
-    border: 1px solid #010165;
-    user-select: none;
-  }
+.rowspacer {
+  background-color: none;
+  height: 10px;
+  width: 10px;
+}
 
-  .rowclue {
-    background-color: none;
-    height: 20px;
-    width: 8px;
-    font-size: 10px;
-    border-radius: 3px;
-    border: 1px solid #010165;
-    user-select: none;
-  }
+.columnclue {
+  background-color: none;
+  height: 8px;
+  width: 20px;
+  font-size: 10px;
+  border-radius: 3px;
+  border: 1px solid #010165;
+  user-select: none;
+}
 
-  .cornerclue {
-    background-color: none;
-    height: 8px;
-    width: 8px;
-  }
+.rowclue {
+  background-color: none;
+  height: 20px;
+  width: 8px;
+  font-size: 10px;
+  border-radius: 3px;
+  border: 1px solid #010165;
+  user-select: none;
+}
 
-  .colrowspacer {
-    background-color: none;
-    height: 10px;
-    width: 10px;
-  }
+.cornerclue {
+  background-color: none;
+  height: 8px;
+  width: 8px;
+}
 
-  .picker {
-    border-radius: 16px;
-    border: 1px solid black;
-    height: 30px;
-    width: 30px;
-  }
+.colrowspacer {
+  background-color: none;
+  height: 10px;
+  width: 10px;
+}
 
-  .active {
-    box-shadow: 0 0 5px 5px azure;
-  }
+.picker {
+  border-radius: 16px;
+  border: 1px solid black;
+  height: 30px;
+  width: 30px;
+}
 
-  .gray { 
-    background-color: #888;
-  }
+.active {
+  box-shadow: 0 0 5px 5px azure;
+}
 
-  .white {
-    background-color: #fff;
-  }
+.gray { 
+  background-color: #888;
+}
 
-  .blue {
-    background-color: #4A86E8;
-  }
+.white {
+  background-color: #fff;
+}
 
-  .red {
-    background-color: crimson;
-  }
-  
-  .green {
-    background-color: #38761D;
-  }
+.blue {
+  background-color: #4A86E8;
+}
 
-  .start {
-    background-color: blanchedalmond;
-  }
+.red {
+  background-color: crimson;
+}
 
-  table {
-    margin: 0 auto;
-    border-spacing: 0px;
-  }
+.green {
+  background-color: #38761D;
+}
 
-  .header {
-    background-color: lightblue;
-    text-align: center;
-    padding: 10px 0;
-  }
-  
-  .title-row {
-    margin-top: 42px;
-    margin-bottom: 21px;
-    text-align: center;
-  }
-  
-  .instructions-title {
-    display: inline;
-    padding: 0 10px;
-    font-size: 24px;
-    font-family: 'Work Sans';
-    color: #00ffff;
-  }
-  
-  .instructions-row {
-    margin: 0 auto;
-    width: 600px;
-    padding-left: 65px;
-    padding-right: 65px;
-    background-color: #010165;
-    /*border: 1px solid green;/* for debugging */
-  }
+.start {
+  background-color: blanchedalmond;
+}
 
-  #bg {
-    background-image: url(./assets/beach.jpeg);
-    background-repeat: no-repeat;
-    background-position: center 75%;
-    background-size: cover;
-    background-color: none;
-  }
-  
-  .instructions-number {
-    padding-right: 25px;
-    font-family: 'Work Sans'; 
-    font-size: 36px;
-    color: #00ffff;
-  }
-  
-  .instructions-text {
-    padding: 10px;
-    font-family: 'Work Sans'; 
-    font-size: 14px;
-    color: #ffffff;
-  }
+table {
+  margin: 0 auto;
+  border-spacing: 0px;
+}
 
-  .start-row {
-    margin: auto;
-    width: 25%;
-    height: 43px;
-    font-family: 'Work Sans';
-    padding-top: 18px;
-    font-size: 18px;
-    text-align: center;
-    color: lightblue;
-    margin-bottom: 18px;
-    cursor: default;
-  }
+.header {
+  background-color: lightblue;
+  text-align: center;
+  padding: 10px 0;
+}
 
-  a {
-    font-family: 'Work Sans';
-    background-color: lightblue;
-    font-size: 18px;
-    text-align: center;
-    color: #010165;
-    text-decoration: none;
-  }
+.title-row {
+  width: 600px;
+  background-color: #010165;
+  margin: 0 auto;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.instructions-title {
+  display: inline;
+  padding: 0 10px;
+  font-size: 24px;
+  font-family: 'Work Sans';
+  color: #00ffff;
+}
+
+.instructions-row {
+  margin: 0 auto;
+  width: 600px;
+  padding-left: 65px;
+  padding-right: 65px;
+  background-color: #010165;
+  /*border: 1px solid green;/* for debugging */
+}
+
+#bg {
+  background-image: url(./assets/beach.jpeg);
+  background-repeat: no-repeat;
+  background-position: center 75%;
+  background-size: cover;
+  background-color: none;
+}
+
+.instructions-number {
+  padding-right: 25px;
+  font-family: 'Work Sans'; 
+  font-size: 36px;
+  color: #00ffff;
+}
+
+.instructions-text {
+  padding: 10px;
+  font-family: 'Work Sans'; 
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.start-row {
+  margin: auto;
+  width: 25%;
+  height: 43px;
+  font-family: 'Work Sans';
+  padding-top: 18px;
+  font-size: 18px;
+  text-align: center;
+  color: lightblue;
+  margin-bottom: 18px;
+  cursor: default;
+}
+
+a {
+  font-family: 'Work Sans';
+  background-color: lightblue;
+  font-size: 18px;
+  text-align: center;
+  color: #010165;
+  text-decoration: none;
+}
