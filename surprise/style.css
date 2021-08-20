@@ -147,7 +147,7 @@
   }
 
   #bg {
-    background-image: url(./beach.jpeg);
+    background-image: url(./assets/beach.jpeg);
     background-repeat: no-repeat;
     background-position: center 75%;
     background-size: cover;
