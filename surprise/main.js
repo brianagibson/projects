@@ -1,6 +1,6 @@
 let activeColor = '';
 let tileClass = '';
-let counter = 224;
+let counter = '';
 let isClicked = false;
 let winner = document.getElementById('start')
 
