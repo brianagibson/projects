@@ -1,3 +1,17 @@
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString)
+const openParam = urlParams.get('open')
+
+let isOpen = openParam;
+console.log(isOpen);
+
+const maskRedirect = () => {
+  console.log('fire 1');
+  if (isOpen) { return; };
+  console.log('fire 2');
+  window.location = 'https://brianagibson.github.io/projects/surprise/mask.html';
+};
+
 let activeColor = '';
 let tileClass = '';
 let counter = '';
@@ -70,3 +84,5 @@ gamePieces.forEach(function(elem) {
 
 gameArea.addEventListener('mousedown', draggingEnabled);
 gameArea.addEventListener('mouseup', draggingDisabled);
+
+window.onload = maskRedirect;
