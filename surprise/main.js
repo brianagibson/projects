@@ -1,6 +1,6 @@
 let activeColor = '';
 let tileClass = '';
-let counter = '';
+let counter = 224;
 let isClicked = false;
 let winner = document.getElementById('start')
 
@@ -37,7 +37,7 @@ const colorMatches = (tileClass) => {
 /* unlocks the next steps when the game is won */
 /* TODO: make the whole div clickable */
 const revealWinner = () => {
-  winner.innerHTML = '<a target = "_blank" href = "https://www.espn.com" >You did it! Reveal the surprise!</a>';
+  winner.innerHTML = '<a target = "_blank" href = "https://docs.google.com/presentation/d/1yOuuIOoNE881A3THk0WashR1KyOeqbO4eWZMiRz4x-A/present?usp=sharing" >You did it! Reveal the surprise!</a>';
   winner.style.backgroundColor = 'lightblue';
   winner.style.borderRadius = '20px';
 };
