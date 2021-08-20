@@ -2,12 +2,14 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString)
 const openParam = urlParams.get('open')
 
+const openDate = new Date('August 26, 2021 21:00:00');
+const testDate = new Date('August 26, 1999 21:00:00');
 let isOpen = openParam;
 console.log(isOpen);
 
 const maskRedirect = () => {
   console.log('fire 1');
-  if (isOpen) { return; };
+  if (isOpen || openDate || testDate) { return; };
   console.log('fire 2');
   window.location = 'https://brianagibson.github.io/projects/surprise/mask.html';
 };
