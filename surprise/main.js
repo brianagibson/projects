@@ -71,3 +71,4 @@ gamePieces.forEach(function(elem) {
 gameArea.addEventListener('mousedown', draggingEnabled);
 gameArea.addEventListener('mouseup', draggingDisabled);
 
+/* test adding a line */
