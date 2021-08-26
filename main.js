@@ -7,7 +7,7 @@ let isOpen = true;
 
 const indexRedirect = () => {
 if (isOpen || openDate < Date.now()) { 
-    'https://brianagibson.github.io/projects/surprise/index.html?open=true'; 
+    window.location = 'https://brianagibson.github.io/projects/surprise/index.html?open=true'; 
     } else {
     window.location = 'https://brianagibson.github.io/projects/surprise/index.html';
     };
