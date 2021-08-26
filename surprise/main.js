@@ -3,7 +3,7 @@ const urlParams = new URLSearchParams(queryString)
 const openParam = urlParams.get('open')
 
 const openDate = new Date('August 26, 2021 21:00:00');
-let isOpen = openParam;
+let isOpen = true;
 
 const maskRedirect = () => {
   if (isOpen || openDate < Date.now()) { return; };
